@@ -1,0 +1,18 @@
+const DURATION = {
+  MONTHLY: 'MONTHLY',
+  YEARLY: 'YEARLY',
+};
+
+const TYPE = {
+  STUDIO: 'STUDIO',
+  API: 'API',
+  ARTICLE: 'ARTICLE',
+  CHARACTER: 'CHARACTER',
+};
+
+const EXPIRE_IN = {
+  A_MONTH: 30,
+  A_YEAR: 365,
+};
+
+export { DURATION, TYPE, EXPIRE_IN };

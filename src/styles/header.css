@@ -1,0 +1,181 @@
+.background {
+  background-color: transparent;
+  background-image: linear-gradient(160deg, #fc692b 0%, #fe506a 100%);
+}
+
+.wave {
+  width: 100%;
+  bottom: 0;
+  left: 0;
+}
+
+.separator-waves {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  min-height: 50px;
+  max-height: 150px;
+}
+
+.separator-waves-parallax > use {
+  animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+}
+
+.separator-waves-parallax > use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 7s;
+}
+
+.separator-waves-parallax > use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 10s;
+}
+
+.separator-waves-parallax > use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 13s;
+}
+
+.separator-waves-parallax > use:nth-child(4) {
+  animation-delay: -5s;
+  animation-duration: 20s;
+}
+
+@keyframes move-forever {
+  0% {
+    transform: translate3d(-90px, 0, 0);
+  }
+  100% {
+    transform: translate3d(85px, 0, 0);
+  }
+}
+
+.background-overlay-pricing {
+  background-image: url('/images/pricing/bg-pricing-mask.png');
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.1;
+  height: 100%;
+  width: 100%;
+}
+
+.background-overlay-contact {
+  background-image: url('/images/contact/bg-contact-mask.png');
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.1;
+  height: 100%;
+  width: 100%;
+}
+
+/*===================================*/
+/* PLAY BUTTON */
+/*===================================*/
+
+.video-box {
+  position: relative;
+  z-index: 0;
+}
+.video-button {
+  display: inline-flex;
+  position: relative;
+  text-decoration: none;
+}
+.video-button:hover {
+  text-decoration: none;
+}
+.video-button {
+  display: flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  background: #fc692b;
+  width: 3em;
+  height: 3em;
+  color: #ffffff;
+  font-size: 22px;
+  text-align: center;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.video-button svg {
+  width: 16px;
+  margin-left: 3px;
+}
+
+.video-button:hover {
+  background: #323232;
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+/*-------------------*/
+/* Video Border */
+/*-------------------*/
+.style-border .video-button {
+  background: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  border-radius: 100%;
+}
+
+.style-border .video-button:hover {
+  background-color: white;
+  color: #fc692b;
+  cursor: pointer;
+}
+
+.style-border.pulse-effect-active .video-button:before,
+.style-border.pulse-effect-active .video-button:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 100%;
+  border: 1px solid #fff;
+}
+.style-border.pulse-effect-active .video-button:before {
+  -webkit-animation: ripple 2s linear infinite;
+  -moz-animation: ripple 2s linear infinite;
+  animation: ripple 2s linear infinite;
+}
+.style-border.pulse-effect-active .video-button:after {
+  -webkit-animation: ripple 2s linear 1s infinite;
+  -moz-animation: ripple 2s linear 1s infinite;
+  animation: ripple 2s linear 1s infinite;
+}
+
+@-webkit-keyframes ripple {
+  0% {
+    -webkit-transform: scale(1);
+  }
+  75% {
+    -webkit-transform: scale(1.6);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1.85);
+    opacity: 0;
+  }
+}
+@keyframes ripple {
+  0% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(1.6);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.85);
+    opacity: 0;
+  }
+}

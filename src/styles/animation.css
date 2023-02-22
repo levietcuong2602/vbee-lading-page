@@ -1,0 +1,40 @@
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(-10%);
+    animation-timing-function: cubic-bezier(0, 0, 1, 1);
+  }
+  50% {
+    transform: translateY(0);
+    animation-timing-function: cubic-bezier(0, 0, 1, 1);
+  }
+}
+
+.animation-bounce {
+  animation: bounce 4s infinite;
+}
+
+.img-hover-zoom {
+  overflow: hidden; 
+}
+
+.img-hover-zoom img {
+  transition: transform .5s ease;
+}
+
+.img-hover-zoom:hover img {
+  transform: scale(1.1);
+}
+
+.collapse {
+  overflow: hidden;
+  transition: 0.5s max-height;
+}
+
+.collapse > p {
+  overflow: auto;
+}
+
+.sample-content {
+  background: #ccc;
+  padding: 10px;
+}

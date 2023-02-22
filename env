@@ -1,0 +1,16 @@
+API_URL=
+CRM_URL=
+
+# IAM
+IAM_URL=
+IAM_REALM=
+IAM_CLIENT_ID=
+
+# TTS_WEBSOCKET_URL 
+TTS_WEBSOCKET_URL=
+
+NODE_ENV=development|production
+CDN_URL=
+
+### Google Tag Manager
+GTM_ID=
